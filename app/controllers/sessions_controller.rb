@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       req.params['client_secret'] = ENV['CLIENT_SECRET']
       req.params['code']=params[:code]
      req.params['redirect_uri'] = "http://localhost:3000/auth"
+       req.headers['Accept'] = 'application/json'
   end
   
   body= JSON.prase(resp.body)
