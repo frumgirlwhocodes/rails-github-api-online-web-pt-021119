@@ -1,11 +1,8 @@
 class RepositoriesController < ApplicationController
   
   def index
-    resp
+    resp=Faraday.get()
   end
   
-  def create 
-    
-  end 
-
+  
 end
